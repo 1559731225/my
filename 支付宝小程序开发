@@ -1,0 +1,26 @@
+1. 支付宝小程序是手机应用嵌入支付宝客户端的一种方法，有以下特点：
+   》基于 Web 技术，学习成本低
+   》一套代码同时支持 iOS 和 Android，接近原生体验
+   》提供丰富的组件和 API（比如获取用户信息、本地存储、支付功能等）
+2. app.json
+app.json是小程序的全局配置，用于配置小程序的页面列表，默认窗口标题，导航栏背景色等。更多配置请参见文档配置。
+
+{
+  "pages": [
+    "pages/todos/todos",    
+    "pages/add-todo/add-todo"
+  ],
+  "window": {
+    "defaultTitle": "Todo App",
+    "titleBarColor": "#323239"
+  }
+}
+app.acss定义了全局样式，作用于当前小程序的所有页面。
+
+page {
+  flex: 1;
+  display: flex;
+  background: #323239;
+  font-family: "pingFang SC" "pingFang";
+}
+上例中的页面为框架支持的特殊选择器，会匹配框架提供的页面根节点容器。
